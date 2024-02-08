@@ -1,0 +1,71 @@
+:root {
+  --primary-color: #6200ea; /* Deep purples */
+  --secondary-color: #03dac6; /* Teal */
+  --background-color: #f5f5f5; /* Off white */
+  --text-color: #212121; /* Almost black */
+  --btn-hover-color: #3700B3; /* Darker purple */
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text-color);
+}
+
+.main-container {
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: white;
+}
+
+.counter-title {
+  margin: 0.5rem 0 2rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+#counter-value {
+  display: block;
+  font-size: 4rem;
+  color: var(--secondary-color);
+  margin: 1rem 0;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+  justify-content: center;
+}
+
+.counter-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color var(--transition-speed);
+  font-size: 1rem;
+}
+
+.counter-btn:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.counter-btn.reset {
+  background-color: var(--secondary-color);
+}
+
+.counter-btn.reset:hover {
+  background-color: darken(var(--secondary-color), 10%);
+}
